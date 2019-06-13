@@ -6,18 +6,18 @@ var romanArray = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"
 $(document).ready(function(){
   $(".numberToRoman").submit(function(event){
     event.preventDefault();
-    var numberInput = parseInt($("#input").val());
+    var numberInput = $("#input").val();
     var romanNumber = toRoman(numberInput)
     // create a var that take result of numberInput look for toRoman in function
-    $("#result").text(romanNumber)
+    $("#result1").text(romanNumber)
   });
 
   $(".romanToNumber").submit(function(event){
     event.preventDefault();
-    var romanInput = $("#inputTwo").val();
+    var romanInput = parseInt($("#inputTwo").val());
     var numberRoman = fromRoman(romanInput)
     // create a var that take result of numberInput look for toRoman in function
-    $("#result").text(numberRoman)
+    $("#result2").text(numberRoman)
   });
 });
 
@@ -44,3 +44,12 @@ function fromRoman(string){
   }
   return resultAnswer;
 }
+//
+// function numberChecker(input){}
+//   return isNaN(input);
+//
+// var numberCheckerState = numberChecker("cat");
+//
+// if (numberCheckerState === true) {
+//
+// }
