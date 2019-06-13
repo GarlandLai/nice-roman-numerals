@@ -4,7 +4,7 @@ var romanArray = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"
 
 // user interface logic gathers input info
 $(document).ready(function(){
-  $(".numberForm").submit(function(event){
+  $(".numberToRoman").submit(function(event){
     event.preventDefault();
     var numberInput = parseInt($("#input").val());
     var romanNumber = toRoman(numberInput)
@@ -12,7 +12,16 @@ $(document).ready(function(){
     $("#result").text(romanNumber)
   });
 
+  $(".romanToNumber").submit(function(event){
+    event.preventDefault();
+    var romanInput = $("#inputTwo").val();
+    var numberRoman = fromRoman(romanInput)
+    // create a var that take result of numberInput look for toRoman in function
+    $("#result").text(numberRoman)
+  });
 });
+
+
 // business logic
 function toRoman(number){
   var resultAnswer = '';
@@ -20,6 +29,17 @@ function toRoman(number){
     while (number%numberArray[x] < number) {
       resultAnswer += romanArray[x];
       number -= numberArray[x];
+    }
+  }
+  return resultAnswer;
+}
+
+function fromRoman(string){
+  var resultAnswer = 0;
+  for(var x = 0; x<=numberArray.length; x++){
+    while (string.indexOf(romanArray[x]) === 0) {
+      resultAnswer += numberArray[x];
+      string = string.replace(romanArray[x],'')
     }
   }
   return resultAnswer;
