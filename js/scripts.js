@@ -14,7 +14,7 @@ $(document).ready(function(){
 
   $(".romanToNumber").submit(function(event){
     event.preventDefault();
-    var romanInput = parseInt($("#inputTwo").val());
+    var romanInput = $("#inputTwo").val();
     var numberRoman = fromRoman(romanInput)
     // create a var that take result of numberInput look for toRoman in function
     $("#result2").text(numberRoman)
@@ -34,20 +34,17 @@ function toRoman(number){
   return resultAnswer;
 }
 
-
-
-
-
-// function fromRoman(string){
-//   var resultAnswer = 0;
-//   for(var x = 0; x<=numberArray.length; x++){
-//     while (string.indexOf(romanArray[x]) === 0) {
-//       resultAnswer += numberArray[x];
-//       string = string.replace(romanArray[x],'')
-//     }
-//   }
-//   return resultAnswer;
-// }
+function fromRoman(string){
+  console.log(string)
+  var resultAnswer = 0;
+  for(var x = 0; x<=numberArray.length; x++){
+    while (string.split("").indexOf(romanArray[x]) === 0) {
+      resultAnswer += numberArray[x];
+      string = string.replace(romanArray[x],'')
+    }
+  }
+  return resultAnswer;
+}
 
 
 
