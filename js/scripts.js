@@ -33,27 +33,3 @@ function toRoman(number){
   }
   return resultAnswer;
 }
-
-function fromRoman(string){
-  console.log(string)
-  var resultAnswer = 0;
-  for(var x = 0; x<=numberArray.length; x++){
-    while (string.split("").indexOf(romanArray[x]) === 0) {
-      resultAnswer += numberArray[x];
-      string = string.replace(romanArray[x],'')
-    }
-  }
-  return resultAnswer;
-}
-
-
-
-//
-// function numberChecker(input){}
-//   return isNaN(input);
-//
-// var numberCheckerState = numberChecker("cat");
-//
-// if (numberCheckerState === true) {
-//
-// }

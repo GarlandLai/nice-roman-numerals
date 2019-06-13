@@ -1,6 +1,7 @@
 .jumbotron {
   text-align: center;
   font-family: 'Cinzel Decorative', cursive;
+  background-color: #989E7E
 }
 .middlePicture{
   float: right;
@@ -13,5 +14,19 @@
 #input {
   height: 40px;
   width: 400px;
-  
+}
+body{
+  background-color: #989E7E
+}
+
+#colorButton {
+  font-family: 'Cinzel Decorative', cursive;
+  background-color: #9CAFB7
+}
+#result{
+
+  font-size: 100px;
+}
+#romanFont{
+  font-family: 'Cinzel Decorative', cursive;
 }
