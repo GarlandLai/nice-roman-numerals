@@ -3,7 +3,10 @@
 Takes a number and convert it to roman numeral
 
 ## Getting Started
-aaaa
+https://alexanderkondra.github.io/romanNumeralsConverter/
+https://Garlandlai.github.io/nice-roman-numerals/
+
+
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
