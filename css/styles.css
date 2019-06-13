@@ -1,0 +1,17 @@
+.jumbotron {
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
+.middlePicture{
+  float: right;
+
+}
+
+#romanTable {
+  width: 400px;
+}
+#input {
+  height: 40px;
+  width: 400px;
+  
+}
